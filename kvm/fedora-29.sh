@@ -1,0 +1,12 @@
+virt-install \
+--name fed29 \
+--ram 1024 \
+--vcpus 1 \
+--disk path=/var/lib/libvirt/images/fed29.img,size=20 \
+--os-variant fedora29 \
+--os-type linux \
+--network bridge=br0 \
+--graphics none \
+--console pty,target_type=serial \
+--location 'http://fedora.inode.at/releases/29/Server/x86_64/os/' \
+--extra-args 'console=ttyS0,115200n8 serial'
